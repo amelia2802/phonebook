@@ -1,0 +1,143 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #F9F8EB;
+}
+
+main{
+    width: 24.06rem;
+    height: 40.06rem;
+    margin: auto;
+    margin-top:1%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.frame{
+    width: 24.06rem;
+    height: 40.06rem;
+    background-image: url(/img/phone.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    transform: translateX(34.4rem);
+    border-radius: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+.header{
+    width: 17rem;
+    height: 9.5rem;
+    background-image: url(./img/header.jpg);
+    position: relative;
+    top: 2rem;
+    background-position: center;
+    background-size: cover;
+    border-radius: 25px 25px 0 0;
+}
+
+h1{
+    position: relative;
+    text-transform: uppercase;
+    top: 1.5rem;
+    left: 2rem;
+    color: #D33B23;
+    text-shadow: 1px 2px 1px #F9F8EB;
+}
+
+.functionaltiy{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.search{
+    width: 20%;
+    background-color: #f9f8ebbd;
+    padding: 0.2rem 1rem;
+    border-radius: 23px;
+    border: 2px solid #3F7645;
+    transition: width 2s;
+    display: flex;
+    overflow: hidden;
+}
+
+.search:hover,.search:focus{
+    width: 50%;
+    outline: #3F7645;
+    box-shadow: 8px 8px 10px rgba(97, 241, 106, 0.36);
+    
+}
+
+.search-img{
+    width: 15px;
+    height: 20px;
+}
+
+.search>input,.search>input:focus{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #D33B23;
+    text-overflow: ellipsis;
+}
+
+
+.add{
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    background-color: rgba(114, 171, 118, 0.36);
+    border: 2px solid #3F7645;
+}
+
+.add > img{
+    width: 23px;
+    height: 23px;
+}
+
+.book{
+    margin-top: 1rem;
+    background-color: #EBF9ED;
+    width: 17rem;
+    height: 28rem;
+    border-radius:0 0 25px 25px;
+}
+
+.contact{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid #72AB76;
+    padding:.8rem;
+}
+
+.contact:nth-child(1){
+    margin-top: 1rem;
+}
+
+.pfp{
+    width: 3.25rem;
+    height: 3.25rem;
+    border-radius: 50%;
+}
+
+.call{
+    width: 2em;
+    height:2rem;
+}
+
+.contact>p{
+    width: 50%;
+    font-weight: 600;
+    color: #2b5b31;
+    font-style: italic;
+}
