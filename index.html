@@ -9,43 +9,19 @@
 <body>
     <div class="frame"></div>
     <main>
-        <div class="header">
+        <div id="header" class="header">
             <h1>Contacts</h1>
             <section class="functionaltiy">
                 <div class="search">
-                    <img class="search-img" src="./img/search.png" >
-                    <input type="text" placeholder="Search"/>
+                    <img id="search-btn" class="search-img" src="./img/search.png" >
+                    <input id="search-name" type="text" placeholder="Search"/>
                 </div>
-                <button class="add"><img src="./img/adduser.png"></button>
+                <button id="add-user" class="add"><img src="./img/adduser.png"></button>
+                <div id="search-results" class="search-results"></div>
             </section>
         </div>
-        <div class="book">
-            <section class="contact">
-                <img class="pfp" src="./img/header.jpg">
-                <p>Allie Grater</p>
-                <img class="call" src="./img/call.png">
-            </section>
-            <section class="contact">
-                <img class="pfp" src="./img/header.jpg">
-                <p>Jane Doe</p>
-                <img class="call" src="./img/call.png">
-            </section>
-            <section class="contact">
-                <img class="pfp" src="./img/header.jpg">
-                <p>John Doe</p>
-                <img class="call" class="pfp" src="./img/call.png">
-            </section>
-            <section class="contact">
-                <img class="pfp" src="./img/header.jpg">
-                <p>Liz Erd</p>
-                <img class="call" src="./img/call.png">
-            </section>
-            <section class="contact">
-                <img class="pfp" src="./img/header.jpg">
-                <p>Melody Sunshine</p>
-                <img class="call" src="./img/call.png">
-            </section>
-        </div>
+        <div id="book" class="book"></div>
     </main>
-</body>
+    <script src="./script.js" ></script>
+    </body>
 </html>

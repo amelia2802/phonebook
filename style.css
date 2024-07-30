@@ -16,6 +16,7 @@ main{
     flex-direction: column;
     align-items: center;
     position: relative;
+    letter-spacing: 2px;
 }
 
 .frame{
@@ -26,7 +27,7 @@ main{
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
-    transform: translateX(34.4rem);
+    transform: translateX(34.5rem);
     border-radius: 25px;
     padding: 0;
     margin: 0;
@@ -118,6 +119,7 @@ h1{
     align-items: center;
     border-bottom: 1px solid #72AB76;
     padding:.8rem;
+    text-transform: capitalize;
 }
 
 .contact:nth-child(1){
@@ -140,4 +142,60 @@ h1{
     font-weight: 600;
     color: #2b5b31;
     font-style: italic;
+}
+
+form{
+    width: 12rem;
+    height:auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background:url("https://i.pinimg.com/564x/8a/01/e9/8a01e90bff11ed3c18a154a5e901554e.jpg");
+    background-position: center;
+    background-size: contain;
+    border: 5px double #2b5b31;
+    font-size: 18px;
+}
+
+#close{
+    position:absolute;
+    right: 2rem;
+    top: 9.5rem;
+    font-size: 1rem;
+    color: #D33B23;
+    text-decoration: none;
+    font-weight: 600;
+}
+form>input{
+    margin: .5rem 0;
+    padding:.5rem 1rem;
+    background-color: rgba(240, 255, 255, 0.652);
+    border-radius: 5px;
+    border: none;
+    
+}
+
+label{
+    font-weight: 600;
+    color: #02470a;
+}
+
+#add{
+    width:max-content;
+    padding: .5rem 1rem;
+    border-radius: 25px;
+    position: relative;
+    left: 5rem;
+    color: #F9F8EB;
+    background-color: #D33B23;
+}
+
+.search-results{
+    position: absolute;
+    top: 3rem;
+    background-color: #00a84b;
+    padding:.2rem .5rem;
+    border-radius: 9px;
+    color: #d0efd6;
 }
