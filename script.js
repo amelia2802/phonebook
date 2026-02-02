@@ -2,7 +2,7 @@ const searchTxt = document.getElementById("search-name");
 const searchBtn = document.getElementById("search-btn");
 const addUser = document.getElementById("add-user");
 
-let userArray = JSON.parse(sessionStorage.getItem('userArray')) || [];
+let contactMap = JSON.parse(sessionStorage.getItem('contactMap')) || {};
 let contactForm = "";
 let contacts = "";
 
@@ -31,8 +31,8 @@ function addContacts() {
         let contactNumber = document.getElementById("number").value;
         
 
-        userArray.push({ userName, contactNumber });
-        sessionStorage.setItem('userArray', JSON.stringify(userArray));
+        contactMap[userName] = contactNumber ;
+        sessionStorage.setItem('contactMap', JSON.stringify(contactMap));
 
         addToContacts(userName);
         window.location.reload(true);
@@ -58,9 +58,9 @@ function addToContacts(userName){
 }
 
 function searchContact(name) {
-    const result = userArray.find(contact => contact.userName.toLowerCase() === name.toLowerCase());
-    if (result) {
-        document.getElementById("search-results").innerHTML = `<p>${result.userName}: ${result.contactNumber}</p>`;
+    const number = contactMap[name];
+    if (number) {
+        document.getElementById("search-results").innerHTML = `<p>${name}: ${number}</p>`;
     } else {
         document.getElementById("search-results").innerHTML = `<p>Not found</p>`;
     }
@@ -76,7 +76,7 @@ searchTxt.addEventListener('input', () => {
 });
 
 window.addEventListener('load', () => {
-    userArray.forEach(contact => addToContacts(contact.userName));
+    Object.keys(contactMap).forEach(name => addToContacts(name));
 })
 
 
