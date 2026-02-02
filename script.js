@@ -31,7 +31,10 @@ function addContacts() {
         let contactNumber = document.getElementById("number").value;
         
 
-        contactMap[userName] = contactNumber ;
+        contactMap[userName.toLowerCase()] = { 
+            originalName: userName, 
+            number: contactNumber 
+        };
         sessionStorage.setItem('contactMap', JSON.stringify(contactMap));
 
         addToContacts(userName);
@@ -58,9 +61,9 @@ function addToContacts(userName){
 }
 
 function searchContact(name) {
-    const number = contactMap[name];
-    if (number) {
-        document.getElementById("search-results").innerHTML = `<p>${name}: ${number}</p>`;
+    const contact = contactMap[name.toLowerCase()];
+    if (contact) {
+        document.getElementById("search-results").innerHTML = `<p>${contact.originalName}: ${contact.number}</p>`;
     } else {
         document.getElementById("search-results").innerHTML = `<p>Not found</p>`;
     }
@@ -76,7 +79,10 @@ searchTxt.addEventListener('input', () => {
 });
 
 window.addEventListener('load', () => {
-    Object.keys(contactMap).forEach(name => addToContacts(name));
+    Object.keys(contactMap).forEach(key => {
+        const contact = contactMap[key];
+        addToContacts(contact.originalName);
+    });
 })
 
 
